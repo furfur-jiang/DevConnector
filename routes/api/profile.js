@@ -42,6 +42,7 @@ router.post(
     ],
   ],
   async (req, res) => {
+    console.log(JSON.stringify(req.body))
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() })
@@ -146,7 +147,8 @@ router.get('/user/:user_id', async (req, res) => {
  */
 router.delete('/', auth, async (req, res) => {
   try {
-    //@todo remove users posts
+    // remove users posts
+    await this.Post.deleteMany({user:req.user.id})
     // reomve profile
     profiles = await Profile.findOneAndRemove({ user: req.user.id })
     // reomve user
