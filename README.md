@@ -64,5 +64,9 @@ npm run dev
 
 预览：https://pure-beyond-79677.herokuapp.com/profiles
 
+试用：
 
+账户：furfur-jiang  
+
+密码：123456
 
