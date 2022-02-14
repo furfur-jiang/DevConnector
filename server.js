@@ -16,8 +16,8 @@ app.use('/api/auth', require('./routes/api/auth'))
 app.use('/api/posts', require('./routes/api/posts'))
 app.use('/api/profile', require('./routes/api/profile'))
 
-//Serve static assets in produection 在生产中服务静态资产
-if (process.env.NODE_ENV === 'rpoduction') {
+//Serve static assets in production 在生产中服务静态资产
+if (process.env.NODE_ENV === 'production') {
   //set static folder 设置静态文件夹
   app.use(express.static('client/build'))
 
