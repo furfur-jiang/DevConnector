@@ -1,6 +1,6 @@
 # DevConnector
 
-基于react express mongodb技术
+开发人员社区，基于react express mongodb技术
 
 ## 基本功能
 
