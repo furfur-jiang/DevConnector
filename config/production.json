@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://fur:fur123@cluster0.siuru.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId":"82d5fb61b17eb2e51075",
+  "githubSecret":"25acef23743638c8a86e4dd0eb910a7a84c981c9"
+}
