@@ -112,7 +112,7 @@ router.put('/like/:id', auth, async (req, res) => {
       post.likes.filter((like) => like.user.toString() === req.user.id).length >
       0
     ) {
-      return res.status(400).json({ msg: 'Posts 已经收藏' })
+      return res.status(400).json({ msg: 'Posts 已经喜欢' })
     }
     post.likes.unshift({ user: req.user.id })
     await post.save()
@@ -137,7 +137,7 @@ router.put('/unlike/:id', auth, async (req, res) => {
       post.likes.filter((like) => like.user.toString() === req.user.id)
         .length === 0
     ) {
-      return res.status(400).json({ msg: 'Posts 未收藏' })
+      return res.status(400).json({ msg: 'Posts 不喜欢' })
     }
     const removeIndex = post.likes
       .map((like) => like.user.toString())

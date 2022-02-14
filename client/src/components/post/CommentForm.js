@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addComment } from '../../actions/post';
 
@@ -9,7 +9,7 @@ const CommentForm = ({ postId, addComment }) => {
   return (
     <div className='post-form'>
       <div className='bg-primary p'>
-        <h3>Leave a Comment</h3>
+        <h3>留言</h3>
       </div>
       <form
         className='form my-1'
@@ -28,7 +28,7 @@ const CommentForm = ({ postId, addComment }) => {
           onChange={e => setText(e.target.value)}
           required
         />
-        <input type='submit' className='btn btn-dark my-1' value='Submit' />
+        <input type='submit' className='btn btn-dark my-1' value='提交' />
       </form>
     </div>
   );
