@@ -23,7 +23,6 @@ import PrivateRoute from './components/routing/PrivateRoute'
 import store from './store'
 import setAuthToken from './utils/setAuthToken'
 
-
 if (localStorage.token) {
   setAuthToken(localStorage.token)
 }
@@ -47,62 +46,33 @@ const App = () => {
               <Route path="/profile/:id" element={<Profile />} />
               <Route
                 path="/dashboard"
-                element={
-                  <PrivateRoute>
-                    <Dashboard />
-                  </PrivateRoute>
-                }
+                element={<PrivateRoute component={Dashboard} />}
               />
               <Route
                 path="/create-profile"
-                element={
-                  <PrivateRoute>
-                    <CreateProfile />
-                  </PrivateRoute>
-                }
+                element={<PrivateRoute component={CreateProfile} />}
               />
               <Route
                 path="/edit-profile"
-                element={
-                  <PrivateRoute>
-                    <EditProfile />
-                  </PrivateRoute>
-                }
+                element={<PrivateRoute component={EditProfile} />}
               />
               <Route
                 path="/add-experience"
-                element={
-                  <PrivateRoute>
-                    <AddExperience />
-                  </PrivateRoute>
-                }
+                element={<PrivateRoute component={AddExperience} />}
               />
               <Route
                 path="/add-education"
-                element={
-                  <PrivateRoute>
-                    <AddEducation />
-                  </PrivateRoute>
-                }
+                element={<PrivateRoute component={AddEducation} />}
               />
               <Route
                 path="/posts"
-                element={
-                  <PrivateRoute>
-                    <Posts />
-                  </PrivateRoute>
-                }
+                element={<PrivateRoute component={Posts} />}
               />
               <Route
                 path="/posts/:id"
-                element={
-                  <PrivateRoute>
-                    <Post />
-                  </PrivateRoute>
-                }
+                element={<PrivateRoute component={Post} />}
               />
-          <Route path="/*" element={<NotFound />} />
-
+              <Route path="/*" element={<NotFound />} />
             </Routes>
           </section>
         </Fragment>
