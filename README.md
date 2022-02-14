@@ -62,6 +62,8 @@ npm run dev
 
 ## 部署到HEROKU
 
+git push heroku main
+
 预览：https://pure-beyond-79677.herokuapp.com/profiles
 
 试用：
